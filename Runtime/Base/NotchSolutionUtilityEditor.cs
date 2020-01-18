@@ -28,6 +28,7 @@ namespace E7.NotchSolution
             get
             {
                 var mainPlayModeView = GetMainPlayModeView.Invoke(null,null);
+                if (mainPlayModeView == null) return false;
                 var name = mainPlayModeView.GetType().FullName;
                 //I am lazy so I will simply do a class name check with the one in that package.
                 return name == "Unity.DeviceSimulator.SimulatorWindow";
